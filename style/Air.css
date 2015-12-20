@@ -29,7 +29,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 ----------------------------------------------------------------*/
 
 .pun {
-	font: 89.25%/1.462em Arial, Helvetica, sans-serif;
+	font: 93.25%/1.462em Arial, Helvetica, sans-serif;
 }
 
 .pun table, .pun td, .pun th, .pun input, .pun select, .pun optgroup, .pun textarea, .pun legend {
@@ -165,9 +165,8 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 ----------------------------------------------------------------*/
 
 .pun {
-	max-width: 1070px;
-	margin: 0 auto;
-	padding: 30px 40px;
+	margin: 30px auto;
+	max-width: 1170px;
 }
 
 #punredirect, #punmaint {
@@ -180,8 +179,33 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 
 .pun .punwrap {
 	border: 1px solid;
-	border-radius: 10px;
 	padding: 18px;
+}
+
+.pun .top-box {
+	height: 18px;
+	margin-bottom: -18px;
+	position: relative;
+	background: url(Air/img/main_top.png) top left no-repeat;
+}
+
+.pun .top-box div {
+	height: 18px;
+	margin-left: 50%;
+	background: url(Air/img/main_top.png) top right no-repeat;
+}
+
+.pun .end-box {
+	margin-top: -17px;
+	height: 18px;
+	position: relative;
+	background: url(Air/img/main_end.png) bottom left no-repeat;
+}
+
+.pun .end-box div {
+	height: 18px;
+	margin-left: 50%;
+	background: url(Air/img/main_end.png) bottom right no-repeat;
 }
 
 #punredirect h2, #punmaint h2 {
@@ -955,7 +979,7 @@ MAIN POSTS
 }
 
 .pun .codebox pre code {
-	padding: 0.5em;
+	padding: 0.75em;
 	white-space: pre;
 }
 
@@ -1164,10 +1188,6 @@ MAIN FORMS
 	width: 98%;
 }
 
-.pun textarea {
-	resize: vertical;
-}
-
 .pun #quickpost .txtarea {
 	padding-right: 12px;
 	position: relative;
@@ -1355,7 +1375,7 @@ PROFILES (+ ADMIN MENU)
 	position: relative;
 }
 
-#adintro, #adstats, #adalerts {
+#adintro, #adstats {
 	border-style: solid;
 	border-width: 1px;
 	padding: 18px;
@@ -1369,7 +1389,7 @@ PROFILES (+ ADMIN MENU)
 	background: url(Air/img/bull.png) center left no-repeat;
 }
 
-#adstats .inbox, #adintro .inbox, #adalerts p {
+#adstats .inbox, #adintro .inbox {
 	border-style: solid;
 	border-width: 1px;
 	padding: 18px;
@@ -1538,7 +1558,7 @@ html, body, .pun {
 /* Main Forms + Profile
 ----------------------------------------------------------------*/
 
-.pun .blockform .box, #adstats, #adintro, #adalerts, #postpreview, #posterror {
+.pun .blockform .box, #adstats, #adintro, #postpreview, #posterror {
 	border-color: #b9c5ce #d9e1e7;
 	background: #ebf1f5;
 }
@@ -1564,7 +1584,7 @@ html, body, .pun {
 	color: #fff;
 }
 
-.pun #posterror .error-info, .pun #adalerts p {
+.pun #posterror .error-info {
 	background: #ffffe1;
 	border-color: #dfe6ee;
 }
@@ -1642,4 +1662,59 @@ html, body, .pun {
 
 .pun .inew .icon {
 	border-color: #91b3d9 #87a8d1 #6c85bb #7292c3;
+}
+
+/* Responsive design
+----------------------------------------------------------------*/
+@media(max-width:1250px) {	
+	.pun {
+		margin: 30px 40px;
+	}
+}
+
+@media(max-width:767px) {
+	html, body, .pun {
+		background: #fff;
+		color: #333;
+		margin: 0;
+	}
+	
+	.top-box, .end-box {
+		display: none;
+	}
+	
+	.pun .punwrap {
+		border: none;
+	}
+	
+	#brdmenu a:link, #brdmenu a:visited {
+		min-width: 0;
+	}
+	
+	.pun .blockpost .postleft, .pun .blockpost .postfootleft {
+		width: 140px;
+		padding: 4px;
+	}
+	
+	#punviewtopic .blockpost dt, #punmoderate .blockpost dt {
+		padding: 0.538em 0 0.538em 4px;
+	}
+}
+
+@media(max-width:467px) {
+	#brdmenu a:link, #brdmenu a:visited {
+		min-width: 0;
+	}
+	
+	#brddesc, #brdstats, #navindex, #brdwelcome ul.conl:last-child {
+		display: none;
+	}
+	
+	.pun .punwrap {
+		padding: 6px;
+	}
+	
+	.pun .blockpost .postleft, .pun .blockpost .postfootleft {
+		width: 100px;
+	}
 }
